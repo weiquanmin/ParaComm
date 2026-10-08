@@ -264,7 +264,7 @@
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>IEEE Transactions on Mobile Computing (TMC 2026)</span>
+                    <span class="author-block">Southwest Jiaotong University, Chongqing University, Peking University<br>IEEE Transactions on Mobile Computing (TMC 2026)</span>
                     <!-- TODO: Remove this line if no equal contribution -->
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Corresponding author</small></span>
                   </div>
@@ -312,6 +312,22 @@
 </section>
 
 
+<!-- Teaser figure-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <div style="text-align: center;">
+        <img src="static/images/Picture_ParaComm1.png" width="482" height="358" alt="fig1_motivation_00.png">
+      </div>
+      <h2 class="subtitle has-text-centered">
+      Feature-Centric Communication (FCC) versus Parameter-Centric Communication (PCC). FCC transmits features or their compressed feature representations, which still mix shared semantic bases with observationspecific variations. PCC instead keeps the shared bases locally through
+dictionary atoms and communicates only sparse parameters for the latter. Therefore, PCC concentrates communication resources on the most informative differences for collaboration.    </div>
+  </div>
+</section>
+<!-- End teaser figure -->
+
+
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -330,6 +346,24 @@
 </section>
 <!-- End paper abstract -->
 
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            Collaborative perception enhances autonomous driving by allowing agents to share complementary perceptual information. Existing methods typically adopt a Feature-Centric Communication (FCC) perspective that focuses on selecting or compressing feature representations for transmission. A shared representational basis offers an opportunity to reduce online communication by encoding observations through compact parameters. Building on this idea, we introduce a Parameter-Centric Communication (PCC) perspective, in which these parameters specify the composition of representational bases retained locally at each agent. We instantiate PCC as ParaComm, a learnable dictionary-driven framework for communication-efficient collaborative perception. In ParaComm, continuous parameters learned from BEV features specify how shared dictionary atoms are combined to form the current collaborative representation. To reduce transmission volume, ParaComm progressively sparsifies these parameters across spatial locations and dictionary atoms and further compacts them through parameter sharing and low-bit quantization. The receiver then explicitly reconstructs collaborative features using the transmitted parameters and its local copy of the shared dictionary. Extensive experiments on OPV2V, V2XSet, and DAIR-V2X validate the effectiveness and generality of ParaComm. On OPV2V, for example, it reduces the communication volume from 34.375 MB to 99.688 KB, corresponding to over 350$\times$ compression, while still improving detection accuracy relative to standard full-feature collaboration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 <!-- Paper poster -->
 <section class="hero is-small is-light">
