@@ -318,7 +318,7 @@
     <div class="hero-body">
 
       <div style="text-align: center;">
-        <img src="static/images/Picture_ParaComm1.png" width="482" height="358" alt="fig1_motivation_00.png">
+        <img src="static/images/Picture_ParaComm1.png" width="482" height="358" alt="Picture_ParaComm1.png">
       </div>
       <h2 class="subtitle has-text-centered">
       Feature-Centric Communication (FCC) versus Parameter-Centric Communication (PCC). FCC transmits features or their compressed feature representations, which still mix shared semantic bases with observationspecific variations. PCC instead keeps the shared bases locally through
@@ -347,38 +347,40 @@ dictionary atoms and communicates only sparse parameters for the latter. Therefo
 <!-- End paper abstract -->
 
 
-<!-- Paper abstract -->
+<!-- Paper Method -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Collaborative perception enhances autonomous driving by allowing agents to share complementary perceptual information. Existing methods typically adopt a Feature-Centric Communication (FCC) perspective that focuses on selecting or compressing feature representations for transmission. A shared representational basis offers an opportunity to reduce online communication by encoding observations through compact parameters. Building on this idea, we introduce a Parameter-Centric Communication (PCC) perspective, in which these parameters specify the composition of representational bases retained locally at each agent. We instantiate PCC as ParaComm, a learnable dictionary-driven framework for communication-efficient collaborative perception. In ParaComm, continuous parameters learned from BEV features specify how shared dictionary atoms are combined to form the current collaborative representation. To reduce transmission volume, ParaComm progressively sparsifies these parameters across spatial locations and dictionary atoms and further compacts them through parameter sharing and low-bit quantization. The receiver then explicitly reconstructs collaborative features using the transmitted parameters and its local copy of the shared dictionary. Extensive experiments on OPV2V, V2XSet, and DAIR-V2X validate the effectiveness and generality of ParaComm. On OPV2V, for example, it reduces the communication volume from 34.375 MB to 99.688 KB, corresponding to over 350$\times$ compression, while still improving detection accuracy relative to standard full-feature collaboration.
-          </p>
+          <!-- TODO: Replace with your paper Method -->
+          <div style="text-align: center;">
+            <img src="static/images/Picture_ParaComm2.png" width="1593" height="629" alt="Picture_ParaComm2.png">
+          </div>
+          <h2 class="subtitle has-text-centered">
+          Overall framework of ParaComm, a Parameter-Centric Communication pipeline for collaborative perception. On the sender side, a shared Communication Backbone, together with Space and Atom Heads, produces a spatial score and atom-level dense parameters. The spatial score is used in Joint Space-Atom Sparsification to sparsify the dense parameters, which are then further compacted by Variable-Tile Parameter Sharing and Quantized Representation to form the transmitted parameters. The resulting transmitted parameters are sent to the receiver, where they are explicitly reconstructed using locally shared dictionary atoms and further refined by a lightweight Refinement Head. The refinement stage reuses the Communication Backbone, reducing additional parameters and computation while improving feature quality.
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<!-- End paper Method -->
 
-<!-- Paper poster -->
+<!-- Paper PDF -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">PDF</h2>
 
-      <!-- TODO: Replace with your poster PDF -->
+      <!-- TODO: Replace with your PDF -->
       <iframe  src="static/pdfs/paper_paracomm.pdf" width="100%" height="550">
           </iframe>
         
       </div>
     </div>
   </section>
-<!--End paper poster -->
+<!--End paper PDF -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
